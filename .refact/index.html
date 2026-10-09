@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <p>Fields with <span style="color:red">*</span> are required.</p>
+
+        <!-- Global message for success / error -->
+        <div id="formMessage" class="form-message"></div>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="studentId">Student ID *</label>
+                <input type="text" id="studentId" name="studentId" placeholder="2024-00123">
+                <small class="error-message" id="err-studentId"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz">
+                <small class="error-message" id="err-fullName"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="juan@example.com">
+                <small class="error-message" id="err-email"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="09171234567">
+                <small class="error-message" id="err-phone"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob">
+                <small class="error-message" id="err-dob"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Gender *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+                </div>
+                <small class="error-message" id="err-gender"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Program *</label>
+                <select id="program" name="program">
+          <option value="">-- Select Program --</option>
+          <option value="BS Information Technology">BS Information Technology</option>
+          <option value="BS Computer Science">BS Computer Science</option>
+          <option value="BS Information Systems">BS Information Systems</option>
+          <option value="BS Civil Engineering">BS Civil Engineering</option>
+          <option value="BS Accountancy">BS Accountancy</option>
+          <option value="BS Nursing">BS Nursing</option>
+          <option value="BS Education">BS Education</option>
+          <option value="BS Business Administration">BS Business Administration</option>
+        </select>
+                <small class="error-message" id="err-program"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="yearLevel">Year Level *</label>
+                <select id="yearLevel" name="yearLevel">
+          <option value="">-- Select Year Level --</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+          <option value="5th Year">5th Year</option>
+        </select>
+                <small class="error-message" id="err-yearLevel"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="At least 8 characters">
+                <small class="error-message" id="err-password"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type password">
+                <small class="error-message" id="err-confirmPassword"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address *</label>
+                <textarea id="address" name="address" rows="3" placeholder="House No., Street, Barangay, City, Province"></textarea>
+                <small class="error-message" id="err-address"></small>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+          <input type="checkbox" id="agreement" name="agreement">
+          <span>I agree to the Terms of Service and Data Privacy Policy *</span>
+        </label>
+                <small class="error-message" id="err-agreement"></small>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Register</button>
+                <button type="reset" id="resetBtn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

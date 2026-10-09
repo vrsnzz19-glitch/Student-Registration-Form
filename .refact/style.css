@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+.invalid {
+    border-color: #e74c3c !important;
+    background-color: #fff6f6;
+}
+
+.valid {
+    border-color: #27ae60 !important;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    min-height: 14px;
+}
+
+.radio-group {
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.checkbox-group {
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background: #4a90e2;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background: #357abd;
+}
+
+button[type="reset"] {
+    background: #ddd;
+    color: #333;
+}
+
+button[type="reset"]:hover {
+    background: #ccc;
+}
+
+.form-message {
+    display: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.form-message.show {
+    display: block;
+}
+
+.form-message.error {
+    background: #fdecea;
+    color: #c0392b;
+    border: 1px solid #e74c3c;
+}
+
+.form-message:not(.error) {
+    background: #eafaf1;
+    color: #1e8449;
+    border: 1px solid #27ae60;
+}
